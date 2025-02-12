@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Modern Portfolio</title>
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">MyPortfolio</div>
+      <div class="menu-icon" id="menuIcon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>my CODE Arena</h1>
+      <p>Where passion, code, and creativity converge to shape extraordinary experiences.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I am <span class="gold-gradient">Aditya Suryawanshi</span>, a digital craftsman who transforms abstract ideas into vibrant code. I blend creativity with precision, shaping visions into experiences that resonate with meaning.
+      </p>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio section">
+    <div class="container">
+      <h2>My Work</h2>
+      <div class="portfolio-grid">
+        <!-- Project 1 -->
+        <div class="portfolio-item">
+          <img src="project1.jpg" alt="Digital Awakening" />
+          <div class="portfolio-info">
+            <h3>Creative + Complex -- <span class="blue-gradient">eNotes</span></h3>
+            <p>
+              A transformative web where design sparks innovation. <span class="gold-gradient">[The best one]</span>
+            </p>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="portfolio-item">
+          <img src="project2.jpg" alt="Interactive Harmony" />
+          <div class="portfolio-info">
+            <h3>Purpose javascript -- <span class="blue-gradient">ITP</span></h3>
+            <p>
+              The simple use of JavaScript at a fine level, which is not a piece of cake.
+            </p>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="portfolio-item">
+          <img src="project3.jpg" alt="Mobile Metamorphosis" />
+          <div class="portfolio-info">
+            <h3>Dealing complexity with joy -- <span class="blue-gradient">CA</span></h3>
+            <p>
+              A complex and working financial history manager that helps track expense/income.
+            </p>
+          </div>
+        </div>
+        <!-- Project 4 -->
+        <div class="portfolio-item">
+          <img src="project1.jpg" alt="Digital Awakening" />
+          <div class="portfolio-info">
+            <h3><span class="blue-gradient">Portfolio</span></h3>
+            <p>
+              Also able to make creative, professionally designed portfolios.<br>Also made this portfolio.
+            </p>
+          </div>
+        </div>
+      </div>
+      <p class="work-note">Click on the work to visit it</p>
+    </div>
+  </section>
+
+  <!-- Work Slider Section (Automatic Sliding Images) -->
+  <section id="work-slider" class="section">
+    <div class="container">
+      <h2>Featured Work</h2>
+      <div class="slider-container">
+        <div class="slider">
+          <img src="slider1.jpg" alt="Work Slide 1" />
+          <img src="slider2.jpg" alt="Work Slide 2" />
+          <img src="slider3.jpg" alt="Work Slide 3" />
+          <img src="slider4.jpg" alt="Work Slide 4" />
+          <img src="slider5.jpg" alt="Work Slide 5" />
+          <img src="slider6.jpg" alt="Work Slide 6" />
+          <img src="slider7.jpg" alt="Work Slide 7" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Bar -->
+  <section id="contact-bar" class="contact-bar">
+    <div class="container">
+      <p>Phone: +91-XXXXXXXXXX | Gmail: aditya@gmail.com</p>
+      <p>Designed by Aditya</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MyPortfolio. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
