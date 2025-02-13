@@ -338,99 +338,73 @@
     color: #888;
   }
   
-/* Slider Container */
+/* Slider Container with Edge Fade for a Modern Look */
 .slider-container {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    margin: 1rem 0;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin: 1rem 0;
+}
+
+/* Optional: Edge Fade Overlays for a polished look */
+.slider-container::before,
+.slider-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 10%;
+  height: 100%;
+  z-index: 2;
+}
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, #121212, transparent);
+}
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, #121212, transparent);
+}
+
+/* Slider: The image strip, containing 14 images (7 original + 7 duplicate) */
+.slider {
+  display: flex;
+  gap: 20px; /* Adjust gap between images */
+  /* Each image + gap is assumed approx. 320px wide.
+     With 14 images, the total width is 320px * 14. */
+  width: calc(320px * 14);
+  animation: scroll 30s linear infinite;
+}
+
+/* Image Styling with Box Shadow and White Glow */
+.slider img {
+  width: 300px; /* Actual image width */
+  height:300px;
+  margin:15px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.slider img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.7));
+}
+
+/* Keyframes for Continuous Scrolling */
+/* The slider scrolls continuously from 0 to -50% of its width (the duplicate set),
+   creating a seamless loop */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
   }
-  
-  /* Slider (the image strip) */
-  .slider {
-    display: flex;
-    gap: 20px;  /* Space between images */
-    /* Total width: 7 images × 320px (approx.) */
-    width: calc(320px * 7);
-    animation: slide 30s linear infinite;
+  to {
+    transform: translateX(-50%);
   }
-  
-  .slider img {
-    width: 300px; /* Image width */
-    flex-shrink: 0;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Enhanced box shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-  }
-  
-  .slider img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8); /* Even more pronounced on hover */
-  }
-  
-  
-  /* Keyframes for the slider animation:
-     - Each image is held (paused) when centered.
-     - The quick transition (3% of time) occurs between images.
-     - Adjust percentages if your image sizes differ. */
-  @keyframes slide {
-    /* Image 1 is centered from 0% to 12% */
-    0% {
-      transform: translateX(0);
-    }
-    12% {
-      transform: translateX(0);
-    }
-    /* Quick transition to Image 2 between 12% and 15% */
-    15% {
-      transform: translateX(-320px);
-    }
-    /* Image 2 centered from 15% to 27% */
-    27% {
-      transform: translateX(-320px);
-    }
-    /* Transition to Image 3 (15% jump to 30%) */
-    30% {
-      transform: translateX(-640px);
-    }
-    /* Image 3 centered from 30% to 42% */
-    42% {
-      transform: translateX(-640px);
-    }
-    /* Transition to Image 4 */
-    45% {
-      transform: translateX(-960px);
-    }
-    /* Image 4 centered from 45% to 57% */
-    57% {
-      transform: translateX(-960px);
-    }
-    /* Transition to Image 5 */
-    60% {
-      transform: translateX(-1280px);
-    }
-    /* Image 5 centered from 60% to 72% */
-    72% {
-      transform: translateX(-1280px);
-    }
-    /* Transition to Image 6 */
-    75% {
-      transform: translateX(-1600px);
-    }
-    /* Image 6 centered from 75% to 87% */
-    87% {
-      transform: translateX(-1600px);
-    }
-    /* Transition to Image 7 */
-    90% {
-      transform: translateX(-1920px);
-    }
-    /* Image 7 centered from 90% to 100% */
-    100% {
-      transform: translateX(-1920px);
-    }
-  }
-  
+}
+
   
   /* Contact Bar Styling */
   .contact-bar {
@@ -443,4 +417,7 @@
   .contact-bar p {
     margin: 5px 0;
   }
+  
+
+
   

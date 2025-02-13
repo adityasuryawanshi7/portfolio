@@ -8,6 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    // Initialize EmailJS with your public key
+    (function(){
+      emailjs.init("Mfq5kN55ctRpCJ72p"); // Replace with your actual public key
+    })();
+  </script>
 </head>
 <body>
   <!-- Header & Navigation -->
@@ -53,8 +61,9 @@
       <h2>My Work</h2>
       <div class="portfolio-grid">
         <!-- Project 1 -->
-        <div class="portfolio-item">
-          <img src="project1.jpg" alt="Digital Awakening" />
+         
+        <div class="portfolio-item" data-url="https://1ak5.github.io/eNotes/">
+          <img src="img9.jpg" alt="Digital Awakening" />
           <div class="portfolio-info">
             <h3>Creative + Complex -- <span class="blue-gradient">eNotes</span></h3>
             <p>
@@ -62,9 +71,11 @@
             </p>
           </div>
         </div>
+        
+        
         <!-- Project 2 -->
-        <div class="portfolio-item">
-          <img src="project2.jpg" alt="Interactive Harmony" />
+        <div class="portfolio-item" data-url="https://adityasuryawanshi7.github.io/ITP/">
+          <img src="img11.jpg" alt="Interactive Harmony" />
           <div class="portfolio-info">
             <h3>Purpose javascript -- <span class="blue-gradient">ITP</span></h3>
             <p>
@@ -72,9 +83,11 @@
             </p>
           </div>
         </div>
+        
+        
         <!-- Project 3 -->
-        <div class="portfolio-item">
-          <img src="project3.jpg" alt="Mobile Metamorphosis" />
+        <div class="portfolio-item" data-url="https://adityasuryawanshi7.github.io/CA/">
+          <img src="img10.jpg" alt="Mobile Metamorphosis" />
           <div class="portfolio-info">
             <h3>Dealing complexity with joy -- <span class="blue-gradient">CA</span></h3>
             <p>
@@ -83,8 +96,8 @@
           </div>
         </div>
         <!-- Project 4 -->
-        <div class="portfolio-item">
-          <img src="project1.jpg" alt="Digital Awakening" />
+        <div class="portfolio-item" data-url="https://adityasuryawanshi7.github.io/portfolio/">
+          <img src="img12.jpg" alt="Digital Awakening" />
           <div class="portfolio-info">
             <h3><span class="blue-gradient">Portfolio</span></h3>
             <p>
@@ -103,13 +116,25 @@
       <h2>Featured Work</h2>
       <div class="slider-container">
         <div class="slider">
-          <img src="slider1.jpg" alt="Work Slide 1" />
-          <img src="slider2.jpg" alt="Work Slide 2" />
-          <img src="slider3.jpg" alt="Work Slide 3" />
-          <img src="slider4.jpg" alt="Work Slide 4" />
-          <img src="slider5.jpg" alt="Work Slide 5" />
-          <img src="slider6.jpg" alt="Work Slide 6" />
-          <img src="slider7.jpg" alt="Work Slide 7" />
+          <img src="img8.jpg" alt="Work Slide 8" />
+          <img src="img1.jpg" alt="Work Slide 1" />
+          <img src="img3.jpg" alt="Work Slide 3" />
+          <img src="img4.jpg" alt="Work Slide 4" />
+          <img src="img5.jpg" alt="Work Slide 5" />
+
+          <img src="img8.jpg" alt="Work Slide 8" />
+          <!-- Duplicate for seamless loop -->
+          <img src="img1.jpg" alt="Work Slide 1 Duplicate" />
+          <img src="img3.jpg" alt="Work Slide 3 Duplicate" />
+          <img src="img4.jpg" alt="Work Slide 4 Duplicate" />
+          <img src="img5.jpg" alt="Work Slide 5 Duplicate" />
+          <img src="img8.jpg" alt="Work Slide 8" />
+          <!-- Duplicate again -->
+          <img src="img1.jpg" alt="Work Slide 1 Duplicate" />
+          <img src="img3.jpg" alt="Work Slide 3 Duplicate" />
+          <img src="img4.jpg" alt="Work Slide 4 Duplicate" />
+          <img src="img5.jpg" alt="Work Slide 5 Duplicate" />
+          <img src="img8.jpg" alt="Work Slide 8" />
         </div>
       </div>
     </div>
@@ -131,18 +156,19 @@
   <!-- Contact Bar -->
   <section id="contact-bar" class="contact-bar">
     <div class="container">
-      <p>Phone: +91-XXXXXXXXXX | Gmail: aditya@gmail.com</p>
-      <p>Designed by Aditya</p>
+      <p>Phone: +91-8839624792 | Gmail: adityasuryawanshi470@gmail.com</p>
+      <p>-Designed by Aditya</p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 MyPortfolio. All Rights Reserved.</p>
+      <p>&copy; 2025 Portfolio. All Rights Reserved.</p>
     </div>
   </footer>
 
+  <!-- Your main JavaScript file -->
   <script src="script.js"></script>
 </body>
 </html>
